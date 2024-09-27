@@ -61,26 +61,26 @@ Solo debes ejecutarlo cuando hayas generado una nueva migración (con flask db m
 
 ## HACER UN CRUD DESDE POSTMAN
 
-    ### GET TODOS LOS PRODUCTOS
-        GET http://127.0.0.1:5000/productos
-    ### GET UN PRODUCTO
-        GET http://127.0.0.1:5000/productos/1
-    ### POST UN PRODUCTO
-        POST http://127.0.0.1:5000/productos
-        body-> {
-                    "nombre": "Chaqueta",
-                    "descripcion": "Chaqueta 100% algodón",
-                    "precio": 69.99
-                }
-    ### PUT UN PRODUCTO
-        PUT http://127.0.0.1:5000/productos/1
-        body-> {
-            "nombre": "Camiseta Actualizada",
-            "descripcion": "Nueva descripción",
-            "precio": 24.99
-        }
-    ### DELETE UN PRODUCTO
-        DELETE http://127.0.0.1:5000/productos/1
+### GET TODOS LOS PRODUCTOS
+    GET http://127.0.0.1:5000/productos
+### GET UN PRODUCTO
+    GET http://127.0.0.1:5000/productos/1
+### POST UN PRODUCTO
+    POST http://127.0.0.1:5000/productos
+    body-> {
+                "nombre": "Chaqueta",
+                "descripcion": "Chaqueta 100% algodón",
+                "precio": 69.99
+            }
+### PUT UN PRODUCTO
+    PUT http://127.0.0.1:5000/productos/1
+    body-> {
+        "nombre": "Camiseta Actualizada",
+        "descripcion": "Nueva descripción",
+        "precio": 24.99
+    }
+### DELETE UN PRODUCTO
+    DELETE http://127.0.0.1:5000/productos/1
 
 
     
