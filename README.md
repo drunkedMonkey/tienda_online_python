@@ -10,9 +10,8 @@ para probar diferentes tecnologías
 * Flask-Migrate
 
 ## ESTRUCTURA DEL PROYECTO
-tienda_online
-    app                     # Carpeta principal del proyecto
 
+    app                     # Carpeta principal del proyecto
         __init__.py          # Inicializa la app de Flask y las extensiones
         models.py            # Modelos de base de datos
         routes.py            # Rutas (endpoints)
