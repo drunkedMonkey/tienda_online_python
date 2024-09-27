@@ -31,6 +31,21 @@ def obtener_productos():
             'precio': producto.precio
         })
     return jsonify(resultado)
+# Ruta para obtener un producto por ID (GET)
+# Ruta para obtener un producto por ID (GET)
+@bp.route('/productos/<int:id>', methods=['GET'])
+def obtener_producto(id):
+    producto = Producto.query.get(id)
+    if not producto:
+        return jsonify({"mensaje": "Producto no encontrado"}), 404
+
+    return jsonify({
+        'id': producto.id,
+        'nombre': producto.nombre,
+        'descripcion': producto.descripcion,
+        'precio': producto.precio
+    })
+
 
 # Ruta para actualizar un producto (PUT)
 @bp.route('/productos/<int:id>', methods=['PUT'])
