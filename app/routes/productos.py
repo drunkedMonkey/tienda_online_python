@@ -11,7 +11,7 @@ productos_bp = Blueprint('productos', __name__)
 # El nombre del blueprint es 'productos', y '__name__' asocia este blueprint con el módulo actual.
 
 # Crear producto (POST)
-@productos_bp.route('/productos', methods=['POST'])
+@productos_bp.route('/crear-producto', methods=['POST'])
 # Definimos una ruta '/productos' que acepta peticiones POST para crear un nuevo producto.
 
 def crear_producto():
@@ -40,7 +40,7 @@ def crear_producto():
     # Devolvemos una respuesta de éxito con un código 201 (creado) y un mensaje en formato JSON.
 
 # Obtener productos (GET)
-@productos_bp.route('/productos', methods=['GET'])
+@productos_bp.route('/listar', methods=['GET'])
 # Definimos una ruta '/productos' que acepta peticiones GET para obtener la lista de productos.
 
 def obtener_productos():
@@ -54,7 +54,7 @@ def obtener_productos():
     # Devolvemos la lista de productos en formato JSON.
 
 # Obtener un solo producto (GET)
-@productos_bp.route('/productos/<int:id>', methods=['GET'])
+@productos_bp.route('/obtener-producto/<int:id>', methods=['GET'])
 # Definimos una ruta '/productos/<int:id>' que acepta peticiones GET para obtener un solo producto por su ID.
 
 def obtener_producto(id):
@@ -65,7 +65,7 @@ def obtener_producto(id):
     # Devolvemos el producto en formato JSON con sus atributos.
 
 # Actualizar producto (PUT)
-@productos_bp.route('/productos/<int:id>', methods=['PUT'])
+@productos_bp.route('/update-producto/<int:id>', methods=['PUT'])
 # Definimos una ruta '/productos/<int:id>' que acepta peticiones PUT para actualizar un producto existente.
 
 def actualizar_producto(id):
@@ -91,7 +91,7 @@ def actualizar_producto(id):
     # Devolvemos un mensaje indicando que el producto ha sido actualizado exitosamente.
 
 # Eliminar producto (DELETE)
-@productos_bp.route('/productos/<int:id>', methods=['DELETE'])
+@productos_bp.route('/delete-producto/<int:id>', methods=['DELETE'])
 # Definimos una ruta '/productos/<int:id>' que acepta peticiones DELETE para eliminar un producto por su ID.
 
 def eliminar_producto(id):
