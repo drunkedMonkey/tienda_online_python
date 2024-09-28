@@ -33,11 +33,11 @@ class Config:
     # Si no se encuentra en las variables de entorno, se usará 'clave_secreta_jwt' como valor por defecto.
     # Este es un parámetro crucial para la seguridad en la autenticación JWT.
 
-# Configuración para Flask-JWT-Extended
-JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=1)
-# Definimos la duración del token de acceso (JWT Access Token) utilizando 'timedelta'. 
-# En este caso, el token expira una hora después de ser generado.
+    # Configuración para Flask-JWT-Extended
+    JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=1)
+    # Definimos la duración del token de acceso (JWT Access Token) utilizando 'timedelta'. 
+    # En este caso, el token expira una hora después de ser generado.
 
-JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
-# Definimos la duración del token de refresco (JWT Refresh Token), el cual expira después de 30 días.
-# Este token permite al usuario obtener un nuevo token de acceso sin necesidad de volver a iniciar sesión.
+    JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
+    # Definimos la duración del token de refresco (JWT Refresh Token), el cual expira después de 30 días.
+    # Este token permite al usuario obtener un nuevo token de acceso sin necesidad de volver a iniciar sesión.
