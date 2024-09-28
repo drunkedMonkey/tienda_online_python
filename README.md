@@ -31,9 +31,12 @@ para probar diferentes tecnologías
 **python run.py**
 
 ## ACTIVAR EL ENTORNO VIRTUAL
-    ### En Windows
+*En Windows*
+
         venv\Scripts\activate
-    ##  En macOS/Linux
+        
+*En macOS/Linux*
+
         source venv/bin/activate
 
 ## INSTALAR DEPENDENCIAS

@@ -1,12 +1,9 @@
 from app import create_app
+from flask_migrate import Migrate
+from app.models import db
 
-# Crear una instancia de la app
-app = create_app()
-
-# Definir una ruta para la página principal
-@app.route('/')
-def index():
-    return "Bienvenido a la tienda online"
+app = create_app()  # Crea la aplicación Flask
+migrate = Migrate(app, db)  # Inicializa Flask-Migrate
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  # Ejecuta la aplicación en modo de depuración
